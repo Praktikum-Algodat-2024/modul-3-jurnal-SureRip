@@ -1,29 +1,24 @@
-class Node {
-    String name;
-    String club;
-    int No;
-    int MP;
-    int W;
-    int D;
-    int L;
-    int GF;
-    int GA;
-    int GD;
-    int Pts;
+public class Node {
+    String judul;
+    String artis;
+    int rilis;
+    int menit;
+    int detik;
+    String genre;
     Node next;
+    Node prev;
 
-    Node(String name, String club, int No, int MP, int W, int D, int L, int GF, int GA, int GD, int Pts) {
-        this.name = name;
-        this.club = club;
-        this.No = No;
-        this.MP = MP;
-        this.W = W;
-        this.D = D;
-        this.L = L;
-        this.GF = GF;
-        this.GA = GA;
-        this.GD = GD;
-        this.Pts = Pts;
+    public Node(String artis, String judul, int rilis, int menit, int detik, String genre) {
+        this.artis = artis;
+        this.judul = judul;
+        this.rilis = rilis;
+        this.menit = menit;
+        this.detik = detik;
+        this.genre = genre;
         this.next = null;
+        this.prev = null;
+    }
+    public int getDurasiTotal() {
+        return menit * 60 + detik;
     }
 }
