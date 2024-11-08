@@ -106,5 +106,13 @@ public class Main {
         playlist.addLagu("See You Again", "Wiz Khalifa ft. Charlie Puth", 2015, 3, 49, "Hip Hop");
 
         playlist.tampilkanPlaylist();
+        long startBubbleSort = System.nanoTime();
+        playlist.urutkanBerdasarkanDurasi();
+        long endBubbleSort = System.nanoTime();
+        long startSelectionSort = System.nanoTime();
+        playlist.urutkanBerdasarkanRilis();
+        long endSelectionSort = System.nanoTime();
+        System.out.println("Waktu Bubble Sort : " + (endBubbleSort - startBubbleSort) + " nanosekon");
+        System.out.println("Waktu Selection Sort : " + (endSelectionSort - startSelectionSort) + " nanosekon");
     }
 }
